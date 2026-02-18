@@ -2,7 +2,7 @@
 int main()
 {
     int prixunitaire,quantite;
-    float MTH,MTTC,TVA;
+    float MTH,MTTC,TVA,QUATUM;
     char code[10],libelle[20];
     printf("entrer le code du produit \n");
     scanf("%s", &code);
@@ -15,6 +15,7 @@ int main()
     TVA=0.18;
     MTH=prixunitaire*quantite;
     MTTC=MTH+(MTH*TVA);
+    QUATUM=MTH/prixunitaire;
     printf("\ninformations du produit \n");
     printf("code : %s\n",code);
     printf("libelle : %s\n",libelle);
@@ -22,6 +23,7 @@ int main()
     printf("quantite : %d\n",quantite);
     printf("MTH : %f\n",MTH);
     printf("MTTC : %f\n",MTTC);
+    printf("QUATUM :%f\n",QUATUM);
     return 0;
 
 }
